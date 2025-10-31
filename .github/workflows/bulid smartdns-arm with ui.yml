@@ -31,10 +31,10 @@ jobs:
       run: |
         chmod +x package/build-pkg.sh
         ./package/build-pkg.sh --platform linux --arch arm --with-ui --static
-        ls -R /tmp/smartdns-linux/
+        ls -R package/target/
 
     - name: upload
       uses: actions/upload-artifact@v4
       with:
         name: smartdns
-        path: /tmp/smartdns-linux/
+        path: package/target/
