@@ -31,3 +31,7 @@ jobs:
       run: |
         chmod +x package/build-pkg.sh
         ./package/build-pkg.sh --platform linux --arch arm --with-ui --static
+
+    - name: smartdns-arm-ui
+      uses: actions/upload-artifact@v4
+      path: /tmp/smartdns-linux/ # or path/to/artifact
